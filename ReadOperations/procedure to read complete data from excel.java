@@ -24,22 +24,22 @@ int colsCount = sheet.getRow(1).getLastCellNum();
 
 // outer for loop to iterate each row
 for (int outer = 0; outer <= rowCount; outer++) {
-		XSSFRow rows = sheet.getRow(outer);
-		// inner for loop to iterate each cell
-		for (int inner = 0; inner < colsCount; inner++) {
-				XSSFCell cell = rows.getCell(inner);
-				switch (cell.getCellType()) {
-						case STRING:
-								System.out.print(cell.getStringCellValue());
-								break;
-						case NUMERIC:
-								System.out.print(cell.getNumericCellValue());
-								break;
-						case BOOLEAN:
-								System.out.print(cell.getBooleanCellValue());
-								break;
-						default:
-								break;
+	XSSFRow rows = sheet.getRow(outer);
+	// inner for loop to iterate each cell
+	for (int inner = 0; inner < colsCount; inner++) {
+		XSSFCell cell = rows.getCell(inner);
+		  switch (cell.getCellType()) {
+				case STRING:
+					System.out.print(cell.getStringCellValue());
+					break;
+				case NUMERIC:
+					System.out.print(cell.getNumericCellValue());
+					break;
+				case BOOLEAN:
+					System.out.print(cell.getBooleanCellValue());
+					break;
+				default:
+					break;
 				}
 				System.out.print(" | ");
 		}
