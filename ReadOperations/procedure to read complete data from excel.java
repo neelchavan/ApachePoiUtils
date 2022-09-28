@@ -24,7 +24,7 @@ int colsCount = sheet.getRow(1).getLastCellNum();
 
 // outer for loop to iterate each row
 for (int outer = 0; outer <= rowCount; outer++) {
-	XSSFRow rows = sheet.getRow(outer);
+  XSSFRow rows = sheet.getRow(outer);
 	// inner for loop to iterate each cell
 	for (int inner = 0; inner < colsCount; inner++) {
 		XSSFCell cell = rows.getCell(inner);
